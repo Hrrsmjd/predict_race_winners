@@ -1,0 +1,18 @@
+[
+    {
+        "raceID": 1,
+        "horseID": 1,
+        "weight": 100,
+        "ageInDays": 1000,
+        "daysSinceLastRace": 10,
+        "nPastRaces": 10 
+    },
+    {
+        "raceID": 1,
+        "horseID": 2,
+        "weight": 200,
+        "ageInDays": 5000,
+        "daysSinceLastRace": 1000,
+        "nPastRaces": 1
+    }
+]
