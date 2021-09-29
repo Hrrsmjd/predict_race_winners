@@ -25,16 +25,6 @@ from apps.ml.registry import MLRegistry
 from server.wsgi import registry
 
 
-## Homepage
-# def home(request):
-#     return render(request, 'index.html')
-
-
-## Results page
-# def result(request):
-#     return render(request, 'results.html')
-
-
 class EndpointViewSet(
     mixins.RetrieveModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet
 ):

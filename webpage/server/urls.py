@@ -21,10 +21,6 @@ from apps.endpoints.urls import urlpatterns as endpoints_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
-    ## Homepage and results page
-    # path('', home, name='home'),
-    # path('results/', results, name='results')
 ]
 
 urlpatterns += endpoints_urlpatterns
