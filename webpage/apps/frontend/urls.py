@@ -1,9 +1,13 @@
 from django.urls import path
-from . import views
 
+from apps.frontend.views import Index
+from apps.frontend.views import HowTo
+from apps.frontend.views import Predict
+
+# router 
 
 urlpatterns = [
-    path('', views.Index, name='index'),
-    path('howto/', views.HowTo, name='howto'),
-    path('predict/', views.Predict, name='')
+    path('', Index, name='index'),
+    path('howto/', HowTo, name='howto'),
+    path('predict/', Predict, name='predict')
 ]
