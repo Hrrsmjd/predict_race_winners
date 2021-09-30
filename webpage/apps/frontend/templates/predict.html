@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/home.css'%}" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="container">
+      <h1>Predict Race Winners</h1>
+      <form class="form-area">
+        <table>
+          <thead>
+            <tr>
+              <th id="race">Race ID</th>
+              <th id="Horse">Horse ID</th>
+              <th id="Weight">Weight</th>
+              <th id="Age">Age (days)</th>
+              <th id="Days">Days past since most recent race (days)</th>
+              <th id="p_races">Number of previous races</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="race">
+                <input type="text" />
+              </td>
+              <td class="Horse">
+                <input type="text" />
+              </td>
+              <td class="Weight">
+                <input type="text" />
+              </td>
+              <td class="Age">
+                <input type="text" />
+              </td>
+              <td class="Days">
+                <input type="text" />
+              </td>
+              <td class="p_races">
+                <input type="text" />
+                <div class="icon-wrapper">
+                  <i class="far fa-trash-alt"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="race">
+                <input type="text" />
+              </td>
+              <td class="Horse">
+                <input type="text" />
+              </td>
+              <td class="Weight">
+                <input type="text" />
+              </td>
+              <td class="Age">
+                <input type="text" />
+              </td>
+              <td class="Days">
+                <input type="text" />
+              </td>
+              <td class="p_races">
+                <input type="text" />
+                <div class="icon-wrapper">
+                  <i class="far fa-trash-alt"></i>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="add-row-options">
+          <h2>Add Row</h2>
+          <button>+</button>
+        </div>
+      </form>
+
+      <h1 class="winner-area">Winner:</h1>
+    </section>
+
+    <script src="{% static 'js/index.js'%}"></script>
+  </body>
+</html>

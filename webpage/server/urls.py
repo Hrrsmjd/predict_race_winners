@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 from apps.endpoints.urls import urlpatterns as endpoints_urlpatterns
+from apps.frontend.urls import urlpatterns as frontend_urlpattern
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
 urlpatterns += endpoints_urlpatterns
+urlpatterns += frontend_urlpattern

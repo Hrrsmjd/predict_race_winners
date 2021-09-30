@@ -57,4 +57,13 @@ nav {
 .Navlist {
   display: flex;
   list-style: None;
+  color: black;
+}
+
+.Button:active {
+  color: black;
+}
+
+.Button:hover {
+  background: #cb997e;
 }
