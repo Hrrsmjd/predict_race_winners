@@ -9,3 +9,4 @@ def HowTo(request):
 
 def Predict(request):
     return render(request, './predict.html')
+

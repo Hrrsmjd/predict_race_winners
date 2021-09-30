@@ -41,22 +41,22 @@
         <tbody>
           <tr>
             <td class="race">
-              <input type="text" />
+              <input type="text" id="raceID"/>
             </td>
             <td class="Horse">
-              <input type="text" />
+              <input type="text" id="horseID"/>
             </td>
             <td class="Weight">
-              <input type="text" />
+              <input type="text" id="weight"/>
             </td>
             <td class="Age">
-              <input type="text" />
+              <input type="text" id="ageInDays"/>
             </td>
             <td class="Days">
-              <input type="text" />
+              <input type="text" id="daysSinceLastRace"/>
             </td>
             <td class="p_races">
-              <input type="text" />
+              <input type="text" id="nPastRaces"/>
               <div class="icon-wrapper">
                 <i class="far fa-trash-alt"></i>
               </div>
@@ -64,22 +64,22 @@
           </tr>
           <tr>
             <td class="race">
-              <input type="text" />
+              <input type="text" id="raceID"/>
             </td>
             <td class="Horse">
-              <input type="text" />
+              <input type="text" id="horseID"/>
             </td>
             <td class="Weight">
-              <input type="text" />
+              <input type="text" id="weight"/>
             </td>
             <td class="Age">
-              <input type="text" />
+              <input type="text" id="ageInDays"/>
             </td>
             <td class="Days">
-              <input type="text" />
+              <input type="text" id="daysSinceLastRace"/>
             </td>
             <td class="p_races">
-              <input type="text" />
+              <input type="text" id="nPastRaces"/>
               <div class="icon-wrapper">
                 <i class="far fa-trash-alt"></i>
               </div>
@@ -108,7 +108,7 @@
       $.ajax({
         type:"POST",
         url:"{% url '' %}", // What goes here?
-        data:{
+        data:[{ // Need dictionary for each row..
           raceID:$('#raceID').val(),
           horseID:$('#horseID').val(),
           weight:$('#weight').val(),
@@ -116,7 +116,7 @@
           daysSinceLastRace:$('#daysSinceLastRace').val(),
           nPastRaces:$('#nPastRaces').val(),
           action: 'post'
-        },
+        }],
         success:function(json){
           document.forms["post-form"].reset();
           document.getElementById("raceID").innerHTML = json["raceID"]
